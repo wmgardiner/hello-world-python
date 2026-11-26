@@ -27,5 +27,10 @@ class TestHelloWorld(unittest.TestCase):
             generate_greetings(count=-1)
 
 
+    def test_uppercase_option(self) -> None:
+        lines = generate_greetings(name="World", count=1, uppercase=True)
+        self.assertEqual(lines, ["HELLO, WORLD! (LOOP NUMBER 1)"])
+
+
 if __name__ == "__main__":
     unittest.main()
